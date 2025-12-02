@@ -1,0 +1,50 @@
+#+title: Note
+#+author: kenjirofukuda@gmail.com
+#+options: toc:nil num:nil ^:nil ^:{}
+#+HTML_HEAD_EXTRA: <style> .figure p {text-align: left;}</style>
+#+HTML_HEAD_EXTRA: <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
+
+
+#+begin_example
+npx create-next-app random-cat
+Need to install the following packages:
+  create-next-app@16.0.6
+Ok to proceed? (y)
+✔ Would you like to use the recommended Next.js defaults? › Yes, use recommended defaults
+Creating a new Next.js app in /home/kenjiro/Nextcloud/prove/ts1/random-cat.
+
+Using npm.
+
+Initializing project with template: app-tw
+
+
+Installing dependencies:
+- next
+- react
+- react-dom
+
+Installing devDependencies:
+- @tailwindcss/postcss
+- @types/node
+- @types/react
+- @types/react-dom
+- eslint
+- eslint-config-next
+- tailwindcss
+- typescript
+
+
+added 364 packages, and audited 365 packages in 17s
+
+145 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+Generating route types...
+✓ Types generated successfully
+
+Success! Created random-cat at /home/kenjiro/Nextcloud/prove/ts1/random-cat
+#+end_example
+
+src/ というフォルダはなく、app がソースディレクトリとなる。
