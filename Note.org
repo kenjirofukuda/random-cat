@@ -84,3 +84,9 @@ fetch("https://api.thecatapi.com/v1/images/search?size=med&mime_types=jpg&format
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 #+end_src
+
+開発ツールのおすすめがメーセージとして現れる
+#+begin_example
+Download the React DevTools for a better development experience:
+https://react.dev/link/react-devtools
+#+end_example
