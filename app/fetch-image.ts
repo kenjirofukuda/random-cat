@@ -1,3 +1,5 @@
+"use server";
+
 // 画像情報の型定義
 type Image = {
   url: string;
