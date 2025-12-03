@@ -180,3 +180,72 @@ import { b } from "./b.module.css";
 > <div className={styles.page}>
 #+end_src>
 余分なクオートが変数展開を阻害していた
+
+
+* tsx 編集環境
+
+- https://joppot.info/posts/c05e989a-e642-4c84-a5b8-a0e0c3178941
+
+* プロダクションビルド
+
+#+begin_example
+$ npm run build
+
+> random-cat@0.1.0 build
+> next build
+
+   ▲ Next.js 16.0.6 (Turbopack)
+   - Environments: .env
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 7.6s
+ ✓ Finished TypeScript in 1655.8ms    
+ ✓ Collecting page data using 11 workers in 547.2ms    
+ ✓ Generating static pages using 11 workers (4/4) in 624.6ms
+ ✓ Finalizing page optimization in 12.5ms    
+
+Route (app)
+┌ ƒ /
+└ ○ /_not-found
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+#+end_example
+
+
+* ディレクトリレイアウト
+#+begin_src bash :results raw
+ tree -L 3 --gitignore
+#+end_src
+
+#+begin_example
+.
+├── app
+│   ├── cat-image.tsx
+│   ├── env.ts
+│   ├── favicon.ico
+│   ├── fetch-image.ts
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.module.css
+│   └── page.tsx
+├── eslint.config.mjs
+├── next.config.ts
+├── Note.org
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── public
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── README.md
+└── tsconfig.json
+
+3 directories, 21 files
+#+end_example
+
