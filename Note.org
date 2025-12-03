@@ -156,3 +156,27 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }
 }),
 #+end_src
+
+
+page [.tsx]
+page [.module.css]
+この規約にファイル名を従わせると、cssのクラス名をオブジェクトとして扱うことが可能。
+
+import 名で装飾することで、同じクラス名の衝突を避けることができる。
+
+#+begin_src javascript
+import { a } from "./a.module.css";
+import { b } from "./b.module.css";
+// ...
+<button className={a.button} />
+<button className={b.button} />
+#+end_src
+
+* スタイルが反映されない原因
+
+#+begin_src diff
+< <div className="{styles.page}">
+---
+> <div className={styles.page}>
+#+end_src>
+余分なクオートが変数展開を阻害していた
